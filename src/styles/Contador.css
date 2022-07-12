@@ -1,0 +1,14 @@
+.contador {
+    background: yellow;
+    width: fit-content;
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+button {
+    border-radius: 5px;
+    margin: 5px;
+    background-color: black;
+    color: white;
+}

@@ -1,10 +1,15 @@
 import React from "react";
+import ItemCount from "./ItemCount"
 
-const Item = (props) => {
+const ItemListContainer = ({ texto }) => {
+
+    const onAdd = (quantity) => {
+        console.log(`Compraste ${quantity} unidades`);
+    }
 
     return (
-        <button className="boton"> {props.greeting}</button>
+        <ItemCount initial={1} stock={5} onAdd={onAdd}/>
     );
 }
 
-export default Item;
+export default ItemListContainer;
