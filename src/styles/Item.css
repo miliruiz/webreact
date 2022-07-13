@@ -1,0 +1,14 @@
+.cards {
+    width: 400px;
+    height: 400px;
+    margin: 40px;
+    display: inline-block;
+}
+ 
+.card{
+    width: 250px;
+}
+.card img {
+    width: 250px;
+    height: 250px;
+}
