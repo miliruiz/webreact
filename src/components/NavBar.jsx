@@ -5,31 +5,15 @@ import "../styles/Nav.css";
 const NavBar = () => {
   return (
     <div>
-      <nav className="nav-conteiner">
-        <ul className="nav items-conteiner">
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              Home
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              Products
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              Contact
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              <CartWidget />
-            </a>
-          </li>
+      <div className="nav">
+        <h3 className="titulo">CASES</h3>
+        <ul className="ul">
+          <a href="">Home</a>
+          <a href="">Products</a>
+          <a href=""><CartWidget /></a>
         </ul>
-      </nav>
-      
+      </div>
+
     </div>
   );
 };

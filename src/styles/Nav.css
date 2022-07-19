@@ -1,1 +1,27 @@
 
+
+.nav {
+    display: flex;
+    height: 50px;
+    margin-bottom: 100px;
+    padding: 0px 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav .ul {
+    display: flex;
+
+
+}
+
+.titulo {
+    font-weight: 800;
+}
+
+.nav ul a {
+    padding: 0px 20px;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
