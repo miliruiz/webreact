@@ -35,7 +35,7 @@ const ItemListContainer = ({ greeting }) => {
     return (
         <div>
             <h2>{greeting}</h2>
-            <ItemCount initial={1} stock={5} onAdd={onAdd} />
+            
             <ItemList data={data} />
         </div>
     );
