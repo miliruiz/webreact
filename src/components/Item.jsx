@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 import "../styles/Item.css"
@@ -12,7 +12,6 @@ const Item = ({ info }) => {
                     <img src={info.img} className="card-img-top" alt="..." />
                     <div className="card-body">
                         <h5 className="card-title">{info.titulo}</h5>
-                        <p className="card-text">{info.descripcion}</p>
                         <p className="precio">${info.precio}</p>
                         <Link to={`/detalle/${info.id}`}><button>Ver Detalle</button></Link>
                     </div>
