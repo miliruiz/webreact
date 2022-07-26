@@ -28,14 +28,10 @@ const ItemListContainer = ({ greeting }) => {
         }
     }, [categoriaId])
 
-    const onAdd = (quantity) => {
-        console.log(`Compraste ${quantity} unidades`);
-    }
-
     return (
         <div>
             <h2>{greeting}</h2>
-            
+
             <ItemList data={data} />
         </div>
     );

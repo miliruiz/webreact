@@ -5,7 +5,7 @@ import "../styles/Item.css"
 
 const Item = ({ info }) => {
     return (
-        
+
         <div className="row row-cols-1 row-cols-md-2 g-4 cards">
             <div className="col">
                 <div className="card">
@@ -23,3 +23,5 @@ const Item = ({ info }) => {
 }
 
 export default Item;
+
+
