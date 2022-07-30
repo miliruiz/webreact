@@ -4,8 +4,8 @@ import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
 import Cart from './components/Cart';
 import ItemDetailsCointainer from './components/ItemDetailsContainer';
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import CartProvider from './components/context/CartContext';
 
 
 class App extends Component {
@@ -13,13 +13,15 @@ class App extends Component {
     return (
       <div className="App">
         <BrowserRouter>
-        <NavBar />
-        <Routes>
-          <Route path='/' element={<ItemListContainer/>}/>
-          <Route path='/categoria/:categoriaId' element={<ItemListContainer/>}/>
-          <Route path='/cart' element={<Cart/>}/>
-          <Route path='/detalle/:detalleId' element={<ItemDetailsCointainer/>}/>
-        </Routes>
+        <CartProvider>
+          <NavBar />
+            <Routes>
+              <Route path='/' element={<ItemListContainer />} />
+              <Route path='/categoria/:categoriaId' element={<ItemListContainer />} />
+              <Route path='/cart' element={<Cart />} />
+              <Route path='/detalle/:detalleId' element={<ItemDetailsCointainer />} />
+            </Routes>
+          </CartProvider>
         </BrowserRouter>
 
       </div>
