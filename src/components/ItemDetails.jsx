@@ -4,11 +4,12 @@ import { Link } from "react-router-dom";
 import "../styles/ItemDetails.css"
 import { useCartContext } from "./context/CartContext";
 
-const ItemDetails = ({ data, item }) => {
+const ItemDetails = ({ data }) => {
     const [goToCart, setGoToCart] = useState(false);
     const {addProduct} = useCartContext();
 
     const onAdd = (quantity) => {
+        console.log(quantity)
         setGoToCart(true);
         addProduct(data, quantity)
     }
@@ -19,11 +20,11 @@ const ItemDetails = ({ data, item }) => {
                 <div className="col">
                     <div className="card"> 
                         <div className="card-body">
-                            <h5 className="card-title">{item.titulo}</h5> 
-                            <img src={item.img} className="card-img-top" alt="..." />
+                            <h5 className="card-title">{data.titulo}</h5> 
+                            <img src={data.img} className="card-img-top" alt="..." />
                             
-                            <p>{item.descripcion}</p>
-                            <p className="precio">${item.precio}</p>
+                            <p>{data.descripcion}</p>
+                            <p className="precio">${data.precio}</p>
                             {
                                 goToCart
                                     ? <Link to='/cart'><button>Finalizar compra</button></Link>

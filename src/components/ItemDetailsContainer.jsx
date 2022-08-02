@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { products } from "../data";
 
 const ItemDetailsCointainer = () => {
-    const [item, setData] = useState ({});
+    const [data, setData] = useState ({});
 
     const { detalleId } = useParams()
 
@@ -21,7 +21,7 @@ const ItemDetailsCointainer = () => {
 
     return ( 
         <>
-        <ItemDetails item={item}/>
+        <ItemDetails data={data}/>
         </>
      );
 }
