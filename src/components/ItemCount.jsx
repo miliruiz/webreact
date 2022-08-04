@@ -13,17 +13,13 @@ const ItemCount = ({initial, stock, onAdd}) => {
         setCount(count + 1)
     }
 
-    useEffect(() => {
-        setCount(parseInt(initial));
-    }, [initial])
-
     return ( 
         <div className="contador">
             <button disabled={count <= 1} onClick={decrementar}>-</button>
             <span> {count} </span>
             <button disabled={count >= stock} onClick={incrementar}>+</button>
             <div>
-                <button disabled={stock <= 0} onClick={() => onAdd(1)}>Agregar al carrito</button>
+                <button disabled={stock <= 0} onClick={() => onAdd(count)}>Agregar al carrito</button>
             </div>
         </div>
      );
