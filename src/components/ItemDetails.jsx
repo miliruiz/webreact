@@ -8,6 +8,8 @@ const ItemDetails = ({ data }) => {
     const [goToCart, setGoToCart] = useState(false);
     const {addProduct} = useCartContext();
 
+    
+
     const onAdd = (quantity) => {
         console.log(quantity)
         setGoToCart(true);
